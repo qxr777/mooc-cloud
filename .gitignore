@@ -1,0 +1,9 @@
+# Project exclude paths
+/course-server/target/
+/eureka-server/target/
+/hystrix-dashboard/target/
+/mooc-api/target/
+/mooc-class-server/target/
+/mooc-domain/target/
+/user-server/target/
+/zuul-server/target/

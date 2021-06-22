@@ -1,0 +1,18 @@
+version: '2'
+services:
+  mooc-cloud-mysql:
+    extends:
+      file: mysql.yml
+      service: mooc-cloud-mysql
+  mooc-cloud-redis:
+    extends:
+      file: redis.yml
+      service: mooc-cloud-redis
+  mooc-cloud-rabbitmq:
+    extends:
+      file: rabbitmq.yml
+      service: mooc-cloud-rabbitmq
+  mooc-cloud-zipkin:
+    extends:
+      file: zipkin.yml
+      service: mooc-cloud-zipkin
