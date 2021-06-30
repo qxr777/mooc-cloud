@@ -7,6 +7,8 @@ import org.springframework.cloud.openfeign.FeignClient;
  * @author qixin on 2021/6/19.
  * @version 1.0
  */
+//@FeignClient(value = "course-server",
+//        fallback = CourseFallbackClient.class)
 @FeignClient(value = "course-server")
 public interface CourseClient extends CourseApi {
 }

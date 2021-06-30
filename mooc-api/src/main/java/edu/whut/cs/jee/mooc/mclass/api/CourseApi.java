@@ -1,5 +1,6 @@
 package edu.whut.cs.jee.mooc.mclass.api;
 
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import edu.whut.cs.jee.mooc.mclass.dto.CourseDto;
 import org.springframework.web.bind.annotation.*;
 
@@ -14,9 +15,11 @@ import java.util.List;
 public interface CourseApi {
 
     @PostMapping("")
+//    @HystrixCommand        //没有具体指明就使用全局的
     Long save(@RequestBody @Valid CourseDto courseDto);
 
     @GetMapping(value = "/{courseId}")
+//    @HystrixCommand        //没有具体指明就使用全局的
     CourseDto findById(@PathVariable Long courseId);
 
 }

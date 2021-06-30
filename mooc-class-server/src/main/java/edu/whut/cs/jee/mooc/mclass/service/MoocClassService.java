@@ -137,6 +137,7 @@ public class MoocClassService {
     @Cacheable(key="T(String).valueOf('id').concat('-').concat(#moocClassId)")
     public MoocClassDto getMoocClass(Long moocClassId) {
         MoocClass moocClass = moocClassRepository.findById(moocClassId).get();
+        CourseDto courseDto = courseClient.findById(moocClass.getCourse().getId());
         MoocClassDto moocClassDto = BeanConvertUtils.convertTo(moocClass, MoocClassDto::new, (s, t) -> {
             t.setCourseId(s.getCourse().getId());
             t.setCourseName(s.getCourse().getName());

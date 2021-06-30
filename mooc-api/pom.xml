@@ -28,6 +28,11 @@
             <version>${lombok.versoin}</version>
             <optional>true</optional>
         </dependency>
+        <!-- 断路器 -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-hystrix</artifactId>
+        </dependency>
 
     </dependencies>
 
